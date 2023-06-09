@@ -7,6 +7,7 @@ import Profile from "../pages/Profile/Profile";
 import ProtectedRoute from "../components/Common/ProtectedRoute/ProtectedRoute";
 import ProductId from "../pages/ProductId/ProductId";
 import NotFound from "../pages/NotFound/NotFound";
+import CartModal from "../components/CartModal/CartModal";
 
 const router = createBrowserRouter([
     {
@@ -39,7 +40,8 @@ const router = createBrowserRouter([
                         <Purchases/>
                     </ProtectedRoute>
                 )
-            }
+            },
+
         ]
     },
     {

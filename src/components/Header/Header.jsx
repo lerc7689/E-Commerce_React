@@ -38,7 +38,8 @@ const Header = () =>{
 
                 {isLogged && <button onClick={handleLogOut}><i className="fa-solid fa-right-from-bracket "></i></button>}
             </div>
-            {isVisibleCart &&  <CartModal/>}
+            
+            {isVisibleCart && isLogged &&  <CartModal/>}
 
         </header>
     </>)

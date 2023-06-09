@@ -1,0 +1,23 @@
+.profileContainer{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+}
+
+.profileCard{
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Yantramanav,sans-serif;
+    color:   #4f4f4f;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 30px 10px #4f4f4f;
+}
+.profileName,
+.profileIcon{
+    color: #f85555;
+}

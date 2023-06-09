@@ -1,0 +1,45 @@
+.loginFormContainer > form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.emailInputContainer,
+.passwordInputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+.emailInputContainer > input,
+.passwordInputContainer > input{
+    height: 35px;
+    background-color: rgb(222, 237, 240);
+    border: thin solid lightgray;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+.passwordInputContainer > button{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.buttonInputContainer > button{
+    height: 35px;
+    width: 100%;
+    background-color: #f85555;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+}
+.buttonInputContainer > button:hover{
+    background-color: #e04f4f;
+    cursor:pointer;
+}
+.buttonInputContainer > button:active{
+    background-color: #c54646;
+    cursor:pointer;
+}

@@ -1,0 +1,94 @@
+.SidebarFilters{
+    width: 25%;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    font-family: Yantramanav,sans-serif;
+    color: #515151;
+}
+
+.priceFilterContainer{
+    position: sticky;
+    top: 120px;
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.priceCategoryTitleContainer{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid lightgray;
+    font-weight: 600;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+.priceCategoryTitleContainer > p:nth-child(2){
+    transform: rotate(180deg);
+}
+.priceFrom,
+.priceTo{
+    display: flex;
+    justify-content: space-between;
+}
+.filterForm{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.priceFrom > input,
+.priceTo > input{
+    height: 35px;
+    border: 1px solid lightgray;
+}
+.filterFormButtonContainer{
+    display: flex;
+    justify-content: end;
+}
+.filterFormButtonContainer > button{
+    width: 40%;
+    height: 35px;
+    background-color: #f85555;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.categorieList{
+    margin: 20px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.categorieList >p{
+    width: fit-content;
+    cursor: pointer;
+}
+@media (min-width: 586px) and (max-width: 980px) {
+    .priceFrom,
+    .priceTo{
+        flex-direction: column;
+    }
+    .priceFrom > input,
+    .priceTo > input{
+        height: 25px;
+        width: 150px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 587px) {
+    .SidebarFilters{
+        width: 100%;
+        margin-bottom: 120px;
+    }
+    .searchContainer{
+        width: 60%;
+    }
+}

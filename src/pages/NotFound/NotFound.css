@@ -1,0 +1,24 @@
+.notFoundContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.notFoundBox{
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    color: #f85555
+}
+.notfoundicon{
+    font-size: 260px;
+}
+.notFoundBox{
+    font-size: 40px;
+    font-family: Yantramanav,sans-serif;
+}

@@ -1,0 +1,13 @@
+.homeContainer{
+    display: flex;    
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    margin-top: 110px;
+}
+
+@media (min-width: 320px) and (max-width: 587px) {
+    .homeContainer{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,84 @@
+.purchasesContainer{
+    min-height: 100vh;
+    margin-top: 120px;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: Yantramanav,sans-serif;
+    color: #4f4f4f;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.purchasesProductList{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+}
+
+/* purchasesCard */
+.purchaseCard{
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    display: flex;
+    margin-bottom: 30px;
+}
+.imgContainerPurchase{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgContainerPurchase > img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.productNameContainerPurchase{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+.quantityContainerPurchase{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+.quantityContainerPurchase p{
+    border: 1px solid #c7c7c7;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.totalPriceContainerPurchase{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+@media (min-width: 586px) and (max-width: 980px) {
+    .quantityContainerPurchase,
+    .totalPriceContainerPurchase,
+    .productNameContainerPurchase{
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 587px) {
+    .quantityContainerPurchase,
+    .totalPriceContainerPurchase,
+    .productNameContainerPurchase{
+        font-size: 10px;
+    }
+    .quantityContainerPurchase p{
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

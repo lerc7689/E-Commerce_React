@@ -1,5 +1,5 @@
 import { Navigate, useLocation } from "react-router-dom";
-import LoginForm from "../../components/Login/loginForm/LoginForm";
+import LoginForm from "../../components/Login/LoginForm/LoginForm";
 import { startSessionThunk } from "../../store/Slices/authSlice";
 import "./Login.css";
 import { useSelector, useDispatch } from "react-redux";

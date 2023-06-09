@@ -1,17 +1,17 @@
 import "./Profile.css";
+import {useDispatch, useSelector} from "react-redux";
 
 const Profile = () =>{
+
+const userLogged = useSelector((store)=> store.auth)
+console.log(userLogged)
     return(
     <>
         <div className="profileContainer">
             <div className="profileCard">
-                <h1 className="profileName">Luis Eduardo Ramirez Castellanos</h1>
-                <h3><i class="fa-solid fa-location-dot profileIcon"></i> Adress</h3>
-                <p>C# Juan pablo duarte #73 sector 30 de mayo</p>
-                <h3> <i class="fa-solid fa-phone profileIcon"></i> Phone</h3>
-                <p>829-721-3784</p>
+                <h1 className="profileName">{userLogged.fullName}</h1>
                 <h3> <i class="fa-solid fa-at profileIcon"></i> Correo</h3>
-                <p>lerc7689@hotmail.com</p>
+                <p>{userLogged.email}</p>
             </div>
         </div>
     </>)

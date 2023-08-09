@@ -3,7 +3,7 @@ import "./CartModal.css";
 import { getCartProducts } from "../../services/Cart/getCartProducts";
 import { useSelector } from "react-redux";
 import CartProduct from "../CartProduct/CartProduct";
-import { createPurchase } from "../../services/purchases/createPurchase";
+import { createPurchase } from "../../services/Purchases/createPurchase";
 import { useNavigate } from "react-router-dom";
 
 const CartModal = () =>{
@@ -16,7 +16,7 @@ const CartModal = () =>{
         const data = await getCartProducts(token)
         setProduct(data)
         let totalAcumulative = 0;
-        data.map(p =>{totalAcumulative += Number(p.product.price* p.quantity) })
+        data.map(p =>{totalAcumulative += Number(parseInt( p.product.price)* p.quantity) })
         setTotal(totalAcumulative)
     }
 
@@ -27,26 +27,36 @@ const CartModal = () =>{
 
     useEffect(()=>{ 
         loadCartProducts()
-    })
+    }, [product])
     return(
     <>
-        <div className="CartContainer">
-            <h2 className="cartTitle">Shopping Cart</h2>
-            <div className="cartProductContainer">
-                {product.length !=0 && product.map(productItem =>
-                    <CartProduct productItem={productItem} />
-                )}
-            </div>
-
-            <div className="totalCartContainer">
-                <div className="total">
-                <h3>Total</h3>
-                <h3>${total}</h3>
+        {product && product != 0 ? 
+            
+            <div className="CartContainer">
+                <h2 className="cartTitle">Shopping Cart</h2>
+                <div className="cartProductContainer">
+                    {product.length !=0 && product.map(productItem =>
+                        <CartProduct productItem={productItem} />
+                    )}
                 </div>
-            <button className="cartCheckout" onClick={handleCheckout}>Chekout</button>
 
+                <div className="totalCartContainer">
+                    <div className="total">
+                        <h3>Total:</h3>
+                        <h3>${total}</h3>
+                    </div>
+                    <button className="cartCheckout" onClick={handleCheckout}>Chekout</button>
+
+                </div>
             </div>
-        </div>
+                
+                :
+                <div className="CartContainer">
+                        <div className="cartEmptyContainer">
+                            <p>Empty cart</p>
+                    </div>
+                </div>
+        }
     </>)
 }
 

@@ -26,6 +26,12 @@
     font-size: 15px;
     cursor: pointer;
 }
+.searchContainer > form button:hover{
+    background-color: #f76969;
+}
+.searchContainer > form button:active{
+    background-color: #f54646;
+}
 
 @media (min-width: 586px) and (max-width: 980px) {
     .searchContainer{

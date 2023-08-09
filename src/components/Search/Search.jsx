@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Search.css";
-import getProductByNameAndCategory from "../../services/getProductByNameAndCategory";
+import getProductByNameAndCategory from "../../services/Categories/getProductByNameAndCategory";
 
 const Search = ({setAllProducts}) =>{
     const [productName, setProductName ] = useState()

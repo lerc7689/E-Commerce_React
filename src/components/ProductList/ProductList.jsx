@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./ProductList.css"
-import getAllProducts from "../../services/getAllProducts";
+import getAllProducts from "../../services/Products/getAllProducts";
 import ProductCard from "../ProductCard/ProductCard";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
@@ -24,7 +24,7 @@ const ProductList = () =>{
         <div className="ProductListSearchContainer">
             <Search setAllProducts={setAllProducts}/>
             <div className="ProductList">
-                {allProducts && allProducts.length == 0? <p>No matches</p> :(
+                {allProducts && allProducts.length == 0? <p className="noMatchesMessage">No matches</p> :(
                     
                     allProducts?.map(product =>
                         <Link key={product.id} 

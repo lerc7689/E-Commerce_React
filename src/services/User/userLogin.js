@@ -1,4 +1,4 @@
-import { axiosInstance } from "../api/axiosInstance"
+import { axiosInstance } from "../../api/axiosInstance"
 
 const userLogin = async (data) =>{
     try {

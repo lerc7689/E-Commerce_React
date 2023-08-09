@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Purchases.css";
 import { useSelector } from "react-redux";
-import { getPurchases } from "../../services/purchases/getPurchases";
+import { getPurchases } from "../../services/Purchases/getPurchases";
 
 const Purchases = () =>{
     const token = useSelector(store => store.auth.token);
@@ -11,6 +11,7 @@ const Purchases = () =>{
     const loadPurchases = async () =>{
         const data = await getPurchases(token)
         setPurchaseData(data)
+        console.log(data)
     }
     useEffect(()=>{
         loadPurchases();
@@ -30,16 +31,16 @@ const Purchases = () =>{
 
                 <div className="purchaseCard">
                     <div className="imgContainerPurchase">
-                        <img src={product.product.images[0].url} alt="" />
+                        <img src={product.product?.images[0]?.url} alt="" />
                     </div>
                     <div className="productNameContainerPurchase">
-                        <p>{product.product.title}</p>
+                        <p>{product.product?.title}</p>
                     </div>
                     <div className="quantityContainerPurchase">
                         <p>{product.quantity}</p>
                     </div>
                     <div className="totalPriceContainerPurchase">
-                        <p>${product.quantity * product.product.price}</p>
+                        <p>${product?.quantity * product.product?.price}</p>
                     </div>  
                 </div>    
             )}

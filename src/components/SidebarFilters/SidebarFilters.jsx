@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import getAllCategories from "../../services/getAllCategories"
+import getAllCategories from "../../services/Categories/getAllCategories"
 import "./SidebarFilters.css"
 
 const SidebarFilters = ({setAllProducts, allProductStore, loadAllProducts}) =>{

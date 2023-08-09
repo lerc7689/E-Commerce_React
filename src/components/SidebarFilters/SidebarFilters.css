@@ -59,6 +59,12 @@
     cursor: pointer;
     margin-top: 10px;
 }
+.filterFormButtonContainer > button:hover{
+    background-color: #f76969;
+}
+.filterFormButtonContainer > button:active{
+    background-color: #f54646;
+}
 
 .categorieList{
     margin: 20px;

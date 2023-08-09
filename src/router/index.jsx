@@ -7,7 +7,7 @@ import Profile from "../pages/Profile/Profile";
 import ProtectedRoute from "../components/Common/ProtectedRoute/ProtectedRoute";
 import ProductId from "../pages/ProductId/ProductId";
 import NotFound from "../pages/NotFound/NotFound";
-import CartModal from "../components/CartModal/CartModal";
+import CreateUser from "../pages/CreateUser/CreateUser";
 
 const router = createBrowserRouter([
     {
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
             {
                 path:"/login",
                 element:<Login/>
+            },
+            {
+                path:"/createUser",
+                element:<CreateUser/>
             },
             {
                 path:"/profile",

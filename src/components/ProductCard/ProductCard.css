@@ -44,6 +44,9 @@
 .infContainer strong{
     margin-top: 20px;
 }
+/* .priceContainer :nth-child(2){
+    color: rgba(0, 128, 0, 0.767);
+} */
 
 .cartIconProductCard{
     display: flex;
@@ -58,6 +61,22 @@
     position: absolute;
     bottom: 30px;
     right: 30px;
+    transition: 0.5s;
+}
+
+.cartIconProductCard:hover{
+    background-color: #fd6d6d;
+    transform: translateY(-5px);
+    transition: 0.5s;
+    color: lightblue;
+}
+
+.cartIconProductCard:active{
+    background-color: #f73f3f;
+}
+
+.selectedProductMessage{
+    color: green;
 }
 
 @media (min-width: 320px) and (max-width: 587px) {

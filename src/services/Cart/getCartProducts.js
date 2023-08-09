@@ -5,7 +5,7 @@ export const getCartProducts = async (token) =>{
         const res = await axiosInstance.get("cart", {
             headers: { Authorization: `Bearer ${token}`}
         })
-
+        
         return res.data;
     } catch (error) {
         console.error(error)

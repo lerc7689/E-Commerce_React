@@ -1,13 +1,14 @@
 .CartContainer{
     background-color: rgb(255, 255, 255);
-    height: 90vh;
     width: 35%;
     position: absolute;
     right: 0px;
     top: 80px;
     color:#4f4f4f;
     overflow-y: auto;
-    box-shadow: -5px 15px 20px 5px rgb(68, 68, 68);
+    box-shadow: 10px 10px 20px 5px rgba(99, 98, 98, 0.938);
+    border-radius: 0px 0px 0px 10px;
+
 }
 .cartProduct{
     background-color: #f85555;
@@ -16,7 +17,8 @@
     width: 100%;
 }
 .totalCartContainer{
-    width: 100%;
+    margin: 10px;
+    width: 90%;
     height:20%;
     background-color: rgb(255, 255, 255);
     position: relative;
@@ -24,6 +26,14 @@
     bottom: 0px;
     border-top: 1px solid #ababab;
     font-family: Yantramanav,sans-serif;
+    background-color: #cfcdcd;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 5%;
+}
+.totalCartContainer h3:nth-child(2){
+    color: green;
 }
 .cartTitle{
     font-family: Yantramanav,sans-serif;
@@ -39,17 +49,31 @@
 }
 .cartCheckout{
     height: 30px;
-    width: 80%;
+    width: 90%;
     background-color: #f85555;
     border: none;
     color: white;
     font-size: 16px;
-    margin-left: 10%;
+    margin-left: 5%;
+    border-radius: 8px;
 }
 .cartProductContainer{
     display: flex;
     flex-direction: column;
     gap:10px;
+}
+
+.cartEmptyContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f85555;
+    margin: 10px;
+    width: 90%;
+    height:80%;
+    border-radius: 10px;
+    font-weight: 900;
+    color: white;
 }
 
 @media (min-width: 586px) and (max-width: 980px) {

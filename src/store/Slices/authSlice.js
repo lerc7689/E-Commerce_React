@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import userLogin from "../../services/userLogin";
-import { json } from "react-router-dom";
+import userLogin from "../../services/User/userLogin";
 
 const emptyState ={
     id:"",
@@ -50,7 +49,6 @@ export const { updateUserData, updateToken, startSession, reset } = authSlice.ac
 
 export const startSessionThunk = ({email, password}) => async (dispatch) =>{
     const sessionData = await userLogin({email, password});
-    
     const userData = {
         id: sessionData.user.id,
         fullName: `${sessionData.user.firstName} ${sessionData.user.lastName}`,

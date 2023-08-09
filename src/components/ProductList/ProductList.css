@@ -14,3 +14,9 @@
     font-family: Yantramanav,sans-serif;
     color: #515151;
 }
+
+.noMatchesMessage{
+    color: tomato;
+    font-size: large;
+    font-weight: 900;
+}

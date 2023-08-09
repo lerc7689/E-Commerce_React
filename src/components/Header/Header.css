@@ -10,6 +10,7 @@ header{
     position: fixed;
     top: 0;
     z-index: 5;
+    box-shadow: 3px 0px 10px 1px darkgrey;
 }
 .headerTitle{
     display: flex;
@@ -36,6 +37,7 @@ header{
 .cartIconContainer{
     height: 30px;
     width: 30px;
+    position: relative;
 }
 
 .userIconContainer:hover,
@@ -56,6 +58,14 @@ header{
     height: 30px;
     width: 30px;
 }
+
+.userIconContainer i:hover,
+.purchseIconContainer i:hover,
+.cartIconContainer i:hover{
+    color: #f85555;
+   
+}
+
 header button{
     height: 50px;
     width: 50px;
@@ -64,6 +74,29 @@ header button{
     background-color: white;
     border: none;
     cursor: pointer;
+}
+
+header button:hover,
+.headerTitle:hover{
+    color: #f76969;
+}
+header button:active,
+.headerTitle:active{
+    color: #f54646;
+}
+.cartQuantity{
+    background-color:#f85555;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    font-weight: 600;
+    position:absolute;
+    top: -10px;
+    right: -10px;
 }
 @media (min-width: 586px) and (max-width: 980px) {
     .headerTitle{

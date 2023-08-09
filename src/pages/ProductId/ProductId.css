@@ -114,6 +114,9 @@
     font-size: 18px;
     margin-bottom: 5px;
 }
+.price_productId{
+    color: rgba(0, 128, 0, 0.767);
+}
 .producDescription_productId{
     line-height: 23px;
     font-size: 15px;
@@ -143,8 +146,12 @@
     align-items: center;
     font-family: Yantramanav,sans-serif;
 }
-.quantity > button{
+.quantity > button:hover{
     cursor: pointer;
+    background-color: lightgrey;
+}
+.quantity > button:active{
+    background-color: darkgray;
 }
 .add_to_cart_Button_productId{
     background-color: #f85555;

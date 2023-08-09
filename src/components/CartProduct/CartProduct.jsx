@@ -15,7 +15,7 @@ const CartProduct = ({productItem}) =>{
     const handleUpdate = async () =>{
         await UpdateProductCart(token, quantity, productItem.id)
     }
-
+    
     useEffect(()=>{
         handleUpdate();
     },[quantity]);
@@ -23,7 +23,7 @@ const CartProduct = ({productItem}) =>{
     <>
         <div className="product">
             <div className="cartProductImg">
-                <img src={productItem.product.images[0].url} alt="" />
+                <img src={productItem.product.images[0]?.url} alt="" />
             </div>
             <div className="cartProductInfo">
                 <p>{productItem.product.title}</p>
@@ -34,7 +34,7 @@ const CartProduct = ({productItem}) =>{
                     <button className="cartBtnPlus" onClick={()=> setQuantity(quantity+1)}>+</button>
                 </div>
                 
-                <p  className="cartProductPrice">{productItem.product.price * quantity}</p>
+                <p  className="cartProductPrice">${parseInt(productItem.product.price)  * quantity}</p>
                  
             </div>
             <button className="deleteBtn" onClick={handleDelete}><i class="fa-solid fa-trash-can"></i></button>            

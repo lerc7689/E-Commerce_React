@@ -3,11 +3,20 @@ import "./Header.css";
 import {useDispatch, useSelector} from "react-redux";
 import { reset } from "../../store/Slices/authSlice";
 import CartModal from "../CartModal/CartModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getCartProducts } from "../../services/Cart/getCartProducts";
 const Header = () =>{
 
     const dispatch = useDispatch()
     const isLogged = useSelector((store)=> store.auth.isLogged)
+    const token = useSelector((store)=> store.auth.token)
+    const [cartProducts, setcartProducts] = useState({});
+
+    const loadCartQuantity =  async () =>{
+        const cartProductsData = await getCartProducts(token)
+        setcartProducts(cartProductsData)   
+    }
+
     const navigate = useNavigate();
     const [isVisibleCart, setIVisibleCart] = useState(false);
 
@@ -15,6 +24,10 @@ const Header = () =>{
         dispatch(reset())
         navigate("/login");
     }
+
+    useEffect(()=>{
+        loadCartQuantity();
+    },[ isLogged, cartProducts])
     return(
     <>
         <header>
@@ -34,8 +47,9 @@ const Header = () =>{
               </Link>
                 <div className="cartIconContainer" onClick={()=> setIVisibleCart(!isVisibleCart)}>
                     <i className="fa-solid fa-cart-shopping"></i>
+                    {cartProducts && cartProducts.length !=0 ? <p className="cartQuantity">{cartProducts.length}</p> : <></>}
                 </div>
-
+                
                 {isLogged && <button onClick={handleLogOut}><i className="fa-solid fa-right-from-bracket "></i></button>}
             </div>
             

@@ -1,8 +1,8 @@
 import { Link, useParams } from "react-router-dom";
 import "./ProductId.css";
 import { useEffect, useState } from "react";
-import getProductById from "../../services/getProductById";
-import getAllProducts from "../../services/getAllProducts";
+import getProductById from "../../services/Products/getProductById";
+import getAllProducts from "../../services/Products/getAllProducts";
 import ProductCard from "../../components/ProductCard/ProductCard"
 import { useSelector } from "react-redux";
 import { addProductToCart } from "../../services/Cart/addProductToCart";
@@ -50,26 +50,26 @@ useEffect(()=>{
                 <button className="backImageButton"  onClick={()=>{if (actualImage!= 0 )setActualImage(actualImage -1)}}>
                     <i className="fa-solid fa-chevron-left"></i>
                 </button>
-                <button className="nextImageButton" onClick={()=>{if (actualImage!= 2 )setActualImage(actualImage +1)}} >
+                <button className="nextImageButton" onClick={()=>{if (actualImage!= 1 )setActualImage(actualImage +1)}} >
                     <i className="fa-solid fa-angle-right"></i>
                 </button>
                     <div className="bigImgContainer">
-                            <img src={productData?.images[actualImage].url} alt="" />
+                            <img src={productData?.images[actualImage]?.url} alt="" />
                     </div>
                     <div className="actualSmallImgContainer">
                         <div className="SmallImg" tabindex="-1">
                             <div>
-                                <img src={productData?.images[0].url} alt="" onClick={()=>setActualImage(0)}/>
+                                <img src={productData?.images[0]?.url} alt="" onClick={()=>setActualImage(0)}/>
                             </div>
                         </div>
                         <div className="SmallImg"  tabindex="-1">
                             <div>
-                                <img src={productData?.images[1].url} alt="" onClick={()=>setActualImage(1)}/>
+                                <img src={productData?.images[1]?.url} alt="" onClick={()=>setActualImage(1)}/>
                             </div>
                         </div>
                         <div className="SmallImg"  tabindex="-1">
                             <div>
-                                <img src={productData?.images[2].url} alt=""  onClick={()=>setActualImage(2)}/>
+                                <img src={productData?.images[2]?.url} alt=""  onClick={()=>setActualImage(2)}/>
                             </div>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ useEffect(()=>{
                     <div className="priceQuantityContainer">
                         <div className="princeContainer">
                         <p className="priceTitle_ProductId">Price</p>
-                            <h2 className="price_productId">{productData?.price}</h2>
+                            <h2 className="price_productId">${productData?.price}</h2>
                         </div>
                         <div className="quantityContainer">
                             <p className="quantityTitle_ProductId">Quantity</p>

@@ -39,6 +39,9 @@ const Purchases = () =>{
                     <div className="quantityContainerPurchase">
                         <p>{product.quantity}</p>
                     </div>
+                    <div className="productCreatedContainerPurchase">
+                        <p>{product?.createdAt.slice(0,10)}</p>
+                    </div>  
                     <div className="totalPriceContainerPurchase">
                         <p>${product?.quantity * product.product?.price}</p>
                     </div>  

@@ -38,6 +38,7 @@
     flex-direction: column;
     gap: 15px;
 }
+
 .priceFrom > input,
 .priceTo > input{
     height: 35px;

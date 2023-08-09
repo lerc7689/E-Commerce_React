@@ -49,3 +49,17 @@
 .profileLogout:active{
     background-color: #af3a3a;
 }
+
+@media (min-width: 587px) and (max-width: 980px) {
+    .profileCard{
+        height: 30%;
+        width: 40%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 587px) {
+    .profileCard{
+        height: 30%;
+        width: 70%;
+    }
+}

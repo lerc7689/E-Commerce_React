@@ -6,6 +6,7 @@ import getAllProducts from "../../services/Products/getAllProducts";
 import ProductCard from "../../components/ProductCard/ProductCard"
 import { useSelector } from "react-redux";
 import { addProductToCart } from "../../services/Cart/addProductToCart";
+import { getCartProducts } from "../../services/Cart/getCartProducts";
 
 const ProductId = () =>{
     const {id} = useParams();
@@ -14,6 +15,15 @@ const ProductId = () =>{
     const [ productQuantity, setProductQuantity] = useState(1)
     const [ similarProducts, setSimilarProducts] = useState([])
     const token = useSelector(store => store.auth.token);
+
+    ///
+    //const token = useSelector(store => store.auth.token);
+
+    const [cartProducts, setcartProducts] = useState();
+    const loadCartQuantity =  async () =>{
+        const cartProductsData = await getCartProducts(token)
+        setcartProducts(cartProductsData)
+    }
 
     const loadProductById = async() =>{
         const data = await getProductById(id)
@@ -34,7 +44,8 @@ const ProductId = () =>{
 
 useEffect(()=>{
     loadProductById();
-},[id])
+    loadCartQuantity();
+},[id, cartProducts])
     return(
     <>
        
@@ -93,7 +104,22 @@ useEffect(()=>{
                             </div>
                         </div>
                     </div>
-                    <button className="add_to_cart_Button_productId" onClick={()=> handleAddToCart()}>Add to cart <i className="fa-solid fa-cart-shopping"></i></button>
+
+
+                    {cartProducts && cartProducts.length !== 0  ? 
+                    <>
+                        {cartProducts?.some(p=> p.productId == productData?.id) ? 
+                                    <p className="selectedProductMessage" >This product is already in the cart</p>                        
+                                :
+                                
+                                <button className="add_to_cart_Button_productId" onClick={()=> handleAddToCart()}>Add to cart <i className="fa-solid fa-cart-shopping"></i></button>
+                                
+                        }
+                    </>
+                    :
+                        <button className="add_to_cart_Button_productId" onClick={()=> handleAddToCart()}>Add to cart <i className="fa-solid fa-cart-shopping"></i></button>
+                    }
+                
                 </div>
 
             </div>

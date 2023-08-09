@@ -45,7 +45,6 @@ const ProductCard = ({Product}) =>{
                 
                 {cartProducts && cartProducts.length !== 0  ? 
                     <>
-                    {console.log(cartProducts.length)}
                         {cartProducts?.some(p=> p.productId == Product.id) ? 
                                     <p className="selectedProductMessage" >This product is already in the cart</p>                        
                                 :

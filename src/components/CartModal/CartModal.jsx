@@ -3,7 +3,7 @@ import "./CartModal.css";
 import { getCartProducts } from "../../services/Cart/getCartProducts";
 import { useSelector } from "react-redux";
 import CartProduct from "../CartProduct/CartProduct";
-import { createPurchase } from "../../services/Purchases/createPurchase";
+import { createPurchase } from "../../services/purchases/createPurchase";
 import { useNavigate } from "react-router-dom";
 
 const CartModal = () =>{

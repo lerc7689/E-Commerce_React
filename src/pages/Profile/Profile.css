@@ -7,7 +7,6 @@
 }
 
 .profileCard{
-    margin-top: 80px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -17,6 +16,13 @@
     background-color: white;
     box-shadow: 0 0 30px 10px #4f4f4f;
     border-radius: 10px;
+    height: 60%;
+    width: 20%;
+    margin-top: 5%;
+}
+
+.profileCard img{
+    height: 200px;
 }
 .profileName,
 .profileIcon{

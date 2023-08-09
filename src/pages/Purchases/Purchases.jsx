@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Purchases.css";
 import { useSelector } from "react-redux";
-import { getPurchases } from "../../services/Purchases/getPurchases";
+import { getPurchases } from "../../services/purchases/getPurchases";
 
 const Purchases = () =>{
     const token = useSelector(store => store.auth.token);

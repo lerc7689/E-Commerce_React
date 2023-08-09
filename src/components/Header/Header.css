@@ -27,17 +27,22 @@ header{
     justify-content: space-around;
     align-items: center;
     gap: 10px;
-    width: 30%;
+    width: 20%;
     font-size: 20px;
     color: rgb(168, 168, 168);
 }
 
 .userIconContainer,
 .purchseIconContainer,
-.cartIconContainer{
+.cartIconContainer,
+header button{
     height: 30px;
     width: 30px;
     position: relative;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 .userIconContainer:hover,
@@ -51,10 +56,6 @@ header{
 .cartIconContainer:active{
     background-color: rgb(214, 214, 214);
     border-radius: 50%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     height: 30px;
     width: 30px;
 }
@@ -67,13 +68,16 @@ header{
 }
 
 header button{
-    height: 50px;
-    width: 50px;
-    font-size: 25px;
+    height: 30px;
+    width: 30px;
+    font-size: 24px;
     color: #f85555;;
     background-color: white;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
 header button:hover,
@@ -102,17 +106,32 @@ header button:active,
     .headerTitle{
         font-size: 25px;
     }
-    .headerIcons,
-    .header button{
-        font-size: 20px;
+
+    header button,
+    .userIconContainer,
+    .purchseIconContainer,
+    .cartIconContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media (min-width: 320px) and (max-width: 587px) {
+    header{
+        padding-right: 40px;
+    }
     .headerTitle{
         font-size: 20px;
     }
-    .headerIcons,
-    .header button{
-        font-size: 15px;
+
+    header button,
+    .userIconContainer,
+    .purchseIconContainer,
+    .cartIconContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
     }
+
 }

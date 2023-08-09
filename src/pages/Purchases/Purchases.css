@@ -78,7 +78,8 @@
 @media (min-width: 320px) and (max-width: 587px) {
     .quantityContainerPurchase,
     .totalPriceContainerPurchase,
-    .productNameContainerPurchase{
+    .productNameContainerPurchase,
+    .productCreatedContainerPurchase{
         font-size: 10px;
     }
     .quantityContainerPurchase p{

@@ -6,10 +6,8 @@
     position: relative;
     padding-top: 110px;
     padding-bottom: 60px;
-    /*  */
     background-color: rgb(241, 241, 241);
     border-radius: 10px;
-    /* border: 2px solid red; */
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -75,9 +73,21 @@
     cursor:pointer;
 }
 
+@media (min-width: 586px) and (max-width: 980px) {
+    .createUserFormContainer > form{
+        width: 60%;
+        height: 80%;
+    }
+}
 
 @media (min-width: 320px) and (max-width: 587px) {
     .createUserFormContainer{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .createUserFormContainer > form{
+        width: 90%;
+        height: 80%;
     }
 }

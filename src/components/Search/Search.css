@@ -5,6 +5,12 @@
     margin-left: 80px;
     margin-right: 80px;
 }
+.noMatchesErrorMessage{
+    color: tomato;
+    font-size: large;
+    font-weight: 900;
+    text-align: center;
+}
 .searchContainer > form{
     display: flex;
 }
@@ -44,6 +50,11 @@
 @media (min-width: 320px) and (max-width: 587px) {
     .searchContainer{
         width: 100%;
+
+    }
+    .noMatchesErrorMessage{
+        font-size: medium;
+        font-weight: 600;
     }
     .searchContainer > form{
         display: flex;
@@ -54,11 +65,11 @@
     }
     .searchContainer > form input{
         height: 35px;
-        width: 90%;
+        width: 80%;
         font-size: 12px;
     }
     .searchContainer > form button{
         height: 35px;
-        width: 10%;
+        width: 20%;
     }
 }

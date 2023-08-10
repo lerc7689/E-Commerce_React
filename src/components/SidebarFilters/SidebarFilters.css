@@ -1,21 +1,20 @@
 .SidebarFilters{
     width: 25%;
-    position: relative;
     z-index: 1;
     display: flex;
     justify-content: center;
     font-family: Yantramanav,sans-serif;
     color: #515151;
+    /* background-color: #f76969; */
 }
 
 .priceFilterContainer{
     position: sticky;
-    top: 120px;
     width: 80%;
-    height: 50vh;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    /* border: 1px solid red; */
 }
 .priceCategoryTitleContainer{
     display: flex;
@@ -37,6 +36,7 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    /* background-color: #f54646; */
 }
 .priceFrom > input,
 .priceTo > input{
@@ -69,11 +69,22 @@
 
 .categorieList{
     margin: 20px;
-    height: 80px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    /*  */
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
 }
+
+.categorieList.visible {
+    max-height: 500px; 
+    opacity: 1;
+    /* transition: max-height 0.5s ease, opacity 0.5s ease; */
+}
+
 .categorieList >p{
     width: fit-content;
     cursor: pointer;
@@ -93,7 +104,7 @@
 @media (min-width: 320px) and (max-width: 587px) {
     .SidebarFilters{
         width: 100%;
-        margin-bottom: 120px;
+        margin-bottom: 30px;
     }
     .searchContainer{
         width: 60%;

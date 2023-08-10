@@ -7,13 +7,14 @@
 }
 
 .ProductList{
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     padding: 20px;
     font-family: Yantramanav,sans-serif;
-    color: #515151;
+    color: #515151
 }
 
 .noMatchesMessage{

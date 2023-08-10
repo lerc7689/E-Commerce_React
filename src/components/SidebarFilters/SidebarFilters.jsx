@@ -60,7 +60,7 @@ const SidebarFilters = ({setAllProducts, allProductStore, loadAllProducts}) =>{
                       </div> 
                       
                       {isVisibleCategory &&(
-                            <div className="categorieList">
+                            <div className={`categorieList ${isVisibleCategory ? 'visible' : ''}`}>
                                 <p onClick={loadAllProducts}>All Categories</p>
                                 {allCategories && (
                                     allCategories.map(categorie =>

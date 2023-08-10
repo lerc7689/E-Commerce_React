@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Search.css";
 import getProductByNameAndCategory from "../../services/Categories/getProductByNameAndCategory";
 
@@ -16,16 +16,22 @@ const Search = ({setAllProducts}) =>{
         if(!e.target.value ){
             setErrorMessage("you must write something")
         }
-            setProductName(e.target.value)
+        else{
+            setErrorMessage("")
+        }
+        setProductName(e.target.value)
+
     }
+
     return(
     <>
         <div className="searchContainer">
-            <form onSubmit={handleSubmit}>
-               {errorMessage && <p>{errorMessage}</p>}
+        
+            <form onSubmit={handleSubmit}>       
                <input type="text" value={productName} onChange={handleChange} placeholder="What are you looking for?"/>
                <button><i className="fa-solid fa-magnifying-glass"></i></button>
             </form>
+            {errorMessage && <p className="noMatchesErrorMessage">{errorMessage}</p>}
         </div>
     </>)
 }

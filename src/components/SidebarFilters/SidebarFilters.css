@@ -38,25 +38,24 @@
     flex-direction: column;
     gap: 15px;
 }
-
 .priceFrom > input,
 .priceTo > input{
     height: 35px;
-    border: 1px solid lightgray;
+    border-radius: 5px;
 }
 .filterFormButtonContainer{
     display: flex;
     justify-content: end;
 }
 .filterFormButtonContainer > button{
-    width: 40%;
+    width: 50%;
     height: 35px;
     background-color: #f85555;
     border-radius: 5px;
     border: none;
     color: white;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 13px;
     cursor: pointer;
     margin-top: 10px;
 }
@@ -98,4 +97,11 @@
     .searchContainer{
         width: 60%;
     }
+    .categorieList{
+        align-items: center;
+    }
+    .filterFormButtonContainer > button{
+        width: 173px;
+    }
 }
+

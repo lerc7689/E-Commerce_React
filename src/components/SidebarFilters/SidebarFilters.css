@@ -42,6 +42,7 @@
 .priceTo > input{
     height: 35px;
     border-radius: 5px;
+    border: 1px solid lightgray;
 }
 .filterFormButtonContainer{
     display: flex;
@@ -101,7 +102,7 @@
         align-items: center;
     }
     .filterFormButtonContainer > button{
-        width: 173px;
+        width: 175px;
     }
 }
 
